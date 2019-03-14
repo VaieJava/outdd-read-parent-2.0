@@ -20,9 +20,6 @@ import java.util.Map;
  */
 @Configuration
 public class JwtToken {
-    public JwtToken(){
-        System.out.println("JwtToken 初始化");
-    }
     /**
      * token converter
      *

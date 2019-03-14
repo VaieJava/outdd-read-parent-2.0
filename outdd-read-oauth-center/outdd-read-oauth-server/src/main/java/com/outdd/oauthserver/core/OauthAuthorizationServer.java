@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter;
 
 /**
  * 认证服务器
@@ -24,6 +25,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 @EnableAuthorizationServer
 public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapter {
 //
+//    OAuth2AuthenticationProcessingFilter
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
@@ -46,7 +48,7 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.allowFormAuthenticationForClients()
-                .tokenKeyAccess("isAuthenticated()")
+                .tokenKeyAccess("permitAll()")//isAuthenticated
                 .checkTokenAccess("permitAll()");
     }
 
@@ -61,7 +63,7 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
         clients.inMemory()
                 .withClient("client")
                 .resourceIds(Constants.DEMO_RESOURCE_ID)
-                .authorizedGrantTypes("password","client_credentials", "refresh_token")
+                .authorizedGrantTypes("password","authorization_code","client_credentials", "refresh_token")
                 .authorities("client_1")
                 .secret("{noop}secret")
                 .scopes("all");
