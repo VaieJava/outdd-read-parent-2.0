@@ -1,0 +1,24 @@
+server:
+  port: 8767
+spring:
+  application:
+    name: oauth-service
+  freemarker:
+    request-context-attribute: request
+  redis:
+   host: 127.0.0.1
+  port: 6379
+  pool:
+    max-idle: 100
+    min-idle: 1
+    max-active: 1000
+    max-wait: -1
+eureka:
+  instance:
+    ##续约更新时间间隔设置5秒，m默认30s
+    lease-renewal-interval-in-seconds: 5
+    ##续约到期时间10秒，默认是90秒
+    lease-expiration-duration-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/

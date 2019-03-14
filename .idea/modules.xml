@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-api/outdd-read-api.iml" filepath="$PROJECT_DIR$/outdd-read-api/outdd-read-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-api/outdd-read-api-member/outdd-read-api-member.iml" filepath="$PROJECT_DIR$/outdd-read-api/outdd-read-api-member/outdd-read-api-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-client-service/outdd-read-client-service.iml" filepath="$PROJECT_DIR$/outdd-read-client-service/outdd-read-client-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-common/outdd-read-common.iml" filepath="$PROJECT_DIR$/outdd-read-common/outdd-read-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-config-server/outdd-read-config-server.iml" filepath="$PROJECT_DIR$/outdd-read-config-server/outdd-read-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-core-server/outdd-read-core-server.iml" filepath="$PROJECT_DIR$/outdd-read-core-server/outdd-read-core-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-eureka-service/outdd-read-eurekaservice.iml" filepath="$PROJECT_DIR$/outdd-read-eureka-service/outdd-read-eurekaservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-gateway/outdd-read-gateway.iml" filepath="$PROJECT_DIR$/outdd-read-gateway/outdd-read-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-member/outdd-read-member.iml" filepath="$PROJECT_DIR$/outdd-read-member/outdd-read-member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-center.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/outdd-read-oauth-common.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/outdd-read-oauth-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-resource/outdd-read-oauth-resource.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-resource/outdd-read-oauth-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/outdd-read-oauth-server.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/outdd-read-oauth-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-parent.iml" filepath="$PROJECT_DIR$/outdd-read-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-provider-service/outdd-read-provider-service.iml" filepath="$PROJECT_DIR$/outdd-read-provider-service/outdd-read-provider-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-zuul/outdd-read-zuul.iml" filepath="$PROJECT_DIR$/outdd-read-zuul/outdd-read-zuul.iml" />
+    </modules>
+  </component>
+</project>

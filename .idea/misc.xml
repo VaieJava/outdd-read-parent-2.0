@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-common/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-eurekaservice/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-api/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-api/outdd-read-api-member/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-member/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-api/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-eureka-service/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-core-server/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-client-service/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-provider-service/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-oauth-center/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-resource/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

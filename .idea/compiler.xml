@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="outdd-oauth-center" />
+        <module name="outdd-read-api-member" />
+        <module name="outdd-read-client-service" />
+        <module name="outdd-read-common" />
+        <module name="outdd-read-config-server" />
+        <module name="outdd-read-core-server" />
+        <module name="outdd-read-eureka-service" />
+        <module name="outdd-read-eurekaservice" />
+        <module name="outdd-read-gateway" />
+        <module name="outdd-read-member" />
+        <module name="outdd-read-oauth-common" />
+        <module name="outdd-read-oauth-resource" />
+        <module name="outdd-read-oauth-server" />
+        <module name="outdd-read-provider-service" />
+        <module name="outdd-read-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="outdd-oauth-center" target="1.8" />
+      <module name="outdd-read-api" target="1.8" />
+      <module name="outdd-read-api-member" target="1.8" />
+      <module name="outdd-read-client-service" target="1.8" />
+      <module name="outdd-read-common" target="1.8" />
+      <module name="outdd-read-config-server" target="1.8" />
+      <module name="outdd-read-core-server" target="1.8" />
+      <module name="outdd-read-eureka-service" target="1.8" />
+      <module name="outdd-read-eurekaservice" target="1.8" />
+      <module name="outdd-read-gateway" target="1.8" />
+      <module name="outdd-read-member" target="1.8" />
+      <module name="outdd-read-oauth" target="1.8" />
+      <module name="outdd-read-oauth-api" target="1.8" />
+      <module name="outdd-read-oauth-center" target="1.8" />
+      <module name="outdd-read-oauth-centre" target="1.8" />
+      <module name="outdd-read-oauth-common" target="1.8" />
+      <module name="outdd-read-oauth-resource" target="1.8" />
+      <module name="outdd-read-oauth-server" target="1.8" />
+      <module name="outdd-read-oauth-service" target="1.8" />
+      <module name="outdd-read-oauth2" target="1.8" />
+      <module name="outdd-read-ouath-client" target="1.8" />
+      <module name="outdd-read-parent" target="1.8" />
+      <module name="outdd-read-provider-service" target="1.8" />
+      <module name="outdd-read-test" target="1.8" />
+      <module name="outdd-read-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
