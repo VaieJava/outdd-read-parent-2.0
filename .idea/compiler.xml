@@ -8,19 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="outdd-oauth-center" />
         <module name="outdd-read-api-member" />
-        <module name="outdd-read-client-service" />
         <module name="outdd-read-common" />
         <module name="outdd-read-config-server" />
-        <module name="outdd-read-core-server" />
-        <module name="outdd-read-eureka-service" />
-        <module name="outdd-read-eurekaservice" />
+        <module name="outdd-read-eureka-server" />
         <module name="outdd-read-gateway" />
         <module name="outdd-read-member" />
         <module name="outdd-read-oauth-common" />
         <module name="outdd-read-oauth-resource" />
         <module name="outdd-read-oauth-server" />
-        <module name="outdd-read-provider-service" />
-        <module name="outdd-read-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +26,7 @@
       <module name="outdd-read-common" target="1.8" />
       <module name="outdd-read-config-server" target="1.8" />
       <module name="outdd-read-core-server" target="1.8" />
+      <module name="outdd-read-eureka-server" target="1.8" />
       <module name="outdd-read-eureka-service" target="1.8" />
       <module name="outdd-read-eurekaservice" target="1.8" />
       <module name="outdd-read-gateway" target="1.8" />
