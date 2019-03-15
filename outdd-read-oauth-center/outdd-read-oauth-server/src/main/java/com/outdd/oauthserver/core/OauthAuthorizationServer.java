@@ -3,6 +3,7 @@ package com.outdd.oauthserver.core;
 import com.outdd.constants.Constants;
 import com.outdd.oauthcommon.config.JwtToken;
 import com.outdd.oauthserver.config.MyRedisTokenStore;
+import com.outdd.oauthserver.exception.AuthExceptionEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 
 import javax.sql.DataSource;
 
@@ -32,6 +34,9 @@ import javax.sql.DataSource;
 public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapter {
 //
 //    OAuth2AuthenticationProcessingFilter
+
+    @Autowired
+    private WebResponseExceptionTranslator customWebResponseExceptionTranslator;
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
@@ -65,7 +70,8 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.allowFormAuthenticationForClients()
                 .tokenKeyAccess("permitAll()")//isAuthenticated
-                .checkTokenAccess("permitAll()");
+                .checkTokenAccess("permitAll()")
+                .authenticationEntryPoint(new AuthExceptionEntryPoint());
 
     }
 
@@ -77,7 +83,9 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        //从数据库获取客户端信息
         clients.withClientDetails(getJdbcClientDetailsService());
+        //加载客户端信息by内存
 //        clients.inMemory()
 //                .withClient("client")
 //                .resourceIds(Constants.DEMO_RESOURCE_ID)
@@ -106,6 +114,8 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
                 .authenticationManager(authenticationManager)
                 //用户账号密码认证
                 .userDetailsService(userDetailsService);
+
+        endpoints.exceptionTranslator(customWebResponseExceptionTranslator);//错误异常
 
     }
 

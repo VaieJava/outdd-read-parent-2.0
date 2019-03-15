@@ -19,7 +19,7 @@ axios.defaults.withCredentials = true
 axios.interceptors.request.use(
   config => {
     config.headers = {
-      'Content-Type': 'application/json;charset=UTF-8' // 设置很关键
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' // 设置很关键
     }
     return config
   },

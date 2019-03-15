@@ -29,6 +29,12 @@ spring:
           - Path=/oauthr/**
           filters:
           - StripPrefix=1
+          - id:  member
+          uri: lb://MEMBER-SERVER
+          predicates:
+          - Path=/member/**
+          filters:
+          - StripPrefix=1
 
 #eureka配置
 eureka:
