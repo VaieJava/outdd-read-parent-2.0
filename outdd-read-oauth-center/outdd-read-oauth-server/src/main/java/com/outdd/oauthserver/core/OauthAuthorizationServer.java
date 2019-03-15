@@ -5,16 +5,22 @@ import com.outdd.oauthcommon.config.JwtToken;
 import com.outdd.oauthserver.config.MyRedisTokenStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+
+import javax.sql.DataSource;
 
 /**
  * 认证服务器
@@ -32,11 +38,21 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
     RedisConnectionFactory redisConnectionFactory;
     @Autowired
     JwtToken jwtToken;
+    @Autowired
+    @Qualifier("dataSource")
+    private DataSource dataSource;
+
+    @Bean("jdbcClientDetailsService")
+    public JdbcClientDetailsService getJdbcClientDetailsService() {
+        return new JdbcClientDetailsService(dataSource);
+    }
 
 
     @Qualifier("myUserDetailsService")
     @Autowired
     private UserDetailsService userDetailsService;
+
+
 
 
     /**
@@ -50,6 +66,7 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
         security.allowFormAuthenticationForClients()
                 .tokenKeyAccess("permitAll()")//isAuthenticated
                 .checkTokenAccess("permitAll()");
+
     }
 
     /**
@@ -60,13 +77,16 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .resourceIds(Constants.DEMO_RESOURCE_ID)
-                .authorizedGrantTypes("password","authorization_code","client_credentials", "refresh_token")
-                .authorities("client_1")
-                .secret("{noop}secret")
-                .scopes("all");
+        clients.withClientDetails(getJdbcClientDetailsService());
+//        clients.inMemory()
+//                .withClient("client")
+//                .resourceIds(Constants.DEMO_RESOURCE_ID)
+//                .authorizedGrantTypes("password","authorization_code","client_credentials", "refresh_token")
+//                .authorities("client_1")
+//                .secret("{noop}secret")
+//                .scopes("all");
+//                .accessTokenValiditySeconds(10000) //token过期时间
+//                .refreshTokenValiditySeconds(10000); //refresh过期时间;
     }
 
     /**

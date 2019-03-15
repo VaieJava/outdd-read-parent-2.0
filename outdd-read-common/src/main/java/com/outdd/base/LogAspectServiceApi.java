@@ -19,10 +19,13 @@ import java.util.Arrays;
 @Component
 @Slf4j
 public class LogAspectServiceApi {
+	public LogAspectServiceApi(){
+		log.info("aop日志初始化");
+	}
 	private JSONObject jsonObject = new JSONObject();
 
 	// 申明一个切点 里面是 execution表达式
-	@Pointcut("execution(public * com.outdd.service.*.*(..))")
+	@Pointcut("execution(public * com.outdd.*.*(..))")
 	private void controllerAspect() {
 	}
 

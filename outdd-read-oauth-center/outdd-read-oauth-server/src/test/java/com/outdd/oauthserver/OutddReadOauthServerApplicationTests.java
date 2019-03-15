@@ -1,23 +1,34 @@
 package com.outdd.oauthserver;
 
+import com.outdd.api.entity.User;
 import com.outdd.base.BaseRedisService;
+import com.outdd.oauthserver.feign.MemberApiServiceFeign;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class OutddReadOauthServerApplicationTests {
 
     @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    private MemberApiServiceFeign memberApiServiceFeign;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    @Value("${server.port}")
+    private String serverPort;
     public void setString(String key, Object data, Long timeout) {
         if (data instanceof String) {
             String value = (String) data;
@@ -29,7 +40,13 @@ public class OutddReadOauthServerApplicationTests {
     }
     @Test
     public void contextLoads() {
-        setString("asd","asdsad",(long)12000000);
+//        User user=memberApiServiceFeign.loadUserByUsername("admin");
+//        System.out.println(user);
+//        System.out.println("端口号为："+serverPort);
+        System.out.println(passwordEncoder.encode("123456"));
+        while (true) {
+
+        }
     }
 
 }

@@ -27,6 +27,9 @@ public class ResponseBase {
         this.msg = msg;
         this.data = data;
     }
+    public ResponseBase() {
+
+    }
     @Override
     public String toString() {
         return "ResponseBase [Code=" + rtnCode + ", msg=" + msg + ", data=" + data + "]";

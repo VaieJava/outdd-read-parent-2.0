@@ -15,7 +15,11 @@
 
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.outdd</groupId>
+            <artifactId>outdd-read-api-member</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

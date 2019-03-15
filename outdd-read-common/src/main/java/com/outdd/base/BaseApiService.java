@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BaseApiService {
-	@Autowired
-	protected BaseRedisService baseRedisService;
+
 
 	// 返回错误，可以传msg
 	public ResponseBase setResultError(String msg) {

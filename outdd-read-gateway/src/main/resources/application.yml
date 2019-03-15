@@ -39,7 +39,8 @@ eureka:
     lease-expiration-duration-in-seconds: 10
   client:
     service-url:
-      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+      defaultZone: http://${eureka.host:39.107.226.36}:${eureka.port:8761}/eureka/
+#      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
 #安全配置
 security:
   basic:

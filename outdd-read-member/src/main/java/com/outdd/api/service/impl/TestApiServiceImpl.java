@@ -31,7 +31,6 @@ public class TestApiServiceImpl extends BaseApiService implements TestApiService
 
     @Override
     public ResponseBase setRedis(Integer id, String name) {
-        baseRedisService.setString("asd",id+""+name,null);
         return setResultSuccess();
     }
 }

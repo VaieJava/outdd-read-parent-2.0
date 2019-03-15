@@ -3,26 +3,33 @@ auth-server1: http://localhost:8763/auth # 认证服务器地址
 server:
   port: 8762
 
-security:
-  oauth2:
-    client:
-      client-id: member
-      client-secret: member
-      scope: all
-      access-token-uri: ${auth-server1}/oauth/token
-      user-authorization-uri: ${auth-server1}/oauth/authorize
-    resource:
-      token-info-uri: ${auth-server1}/oauth/check_token
+#security:
+#  oauth2:
+#    client:
+#      client-id: member
+#      client-secret: member
+#      scope: all
+#      access-token-uri: ${auth-server1}/oauth/token
+#      user-authorization-uri: ${auth-server1}/oauth/authorize
+#    resource:
+#      token-info-uri: ${auth-server1}/oauth/check_token
 
 
-
+#spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 spring:
+  jpa:
+    database: mysql #设置方言
+    hibernate:
+      show_sql: true #显示sql
+      format_sql: true #格式化sql
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #设置数据库sql、不加下划线
   application:
-    name: member-service
+    name: member-server
   datasource:
     ##数据库连接信息
     name: member
-    url: jdbc:mysql://39.107.226.36:3306/admin?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://39.107.226.36:3306/rbac?useUnicode=true&characterEncoding=utf8
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -62,11 +69,15 @@ spring:
     max-active: 1000
     max-wait: -1
 eureka:
+  instance:
+    ##续约更新时间间隔设置5秒，m默认30s
+    lease-renewal-interval-in-seconds: 5
+    ##续约到期时间10秒，默认是90秒
+    lease-expiration-duration-in-seconds: 10
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-    instance:
-        prefer-ip-address: true
-mybatis:
-  mapper-locations: classpath:mappers/**/*.xml
-  type-aliases-package: com.outdd.api.**.entity
+    service-url:
+        defaultZone: http://${eureka.host:39.107.226.36}:${eureka.port:8761}/eureka/
+      #      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+#mybatis:
+#  mapper-locations: classpath:mappers/**/*.xml
+#  type-aliases-package: com.outdd.api.**.entity
