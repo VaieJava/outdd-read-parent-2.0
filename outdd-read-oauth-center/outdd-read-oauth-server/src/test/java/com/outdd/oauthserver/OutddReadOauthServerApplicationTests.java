@@ -1,14 +1,11 @@
 package com.outdd.oauthserver;
 
-import com.outdd.api.entity.User;
-import com.outdd.base.BaseRedisService;
 import com.outdd.oauthserver.feign.MemberApiServiceFeign;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
