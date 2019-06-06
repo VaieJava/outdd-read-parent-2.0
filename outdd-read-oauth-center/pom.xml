@@ -48,6 +48,7 @@
 
     <modules>
         <module>outdd-read-oauth-server</module>
+        <module>outdd-read-oauth-common</module>
     </modules>
 
 </project>
