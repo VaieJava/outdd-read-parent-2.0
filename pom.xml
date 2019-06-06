@@ -104,6 +104,7 @@
         <module>outdd-read-member</module>
         <module>outdd-read-api</module>
         <module>outdd-read-oauth-center</module>
+        <module>outdd-read-common</module>
         <module>outdd-read-eureka-server</module>
     </modules>
 
