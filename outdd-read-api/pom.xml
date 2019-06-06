@@ -23,4 +23,9 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <module>outdd-read-api-member</module>
+    </modules>
+
+
 </project>
