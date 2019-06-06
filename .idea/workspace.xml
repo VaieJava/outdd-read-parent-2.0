@@ -164,7 +164,7 @@
         <entry file="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/src/main/java/com/outdd/oauthserver/config/MyUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -403,7 +403,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559836861942" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559836878336" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -569,7 +569,7 @@
       <workItem from="1558579749337" duration="12512000" />
       <workItem from="1558662632163" duration="2755000" />
       <workItem from="1559287455374" duration="3512000" />
-      <workItem from="1559824921558" duration="9045000" />
+      <workItem from="1559824921558" duration="9432000" />
     </task>
     <task id="LOCAL-00001" summary="新增前端">
       <created>1557392442254</created>
@@ -641,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559836830261</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="测试自动构建">
+      <created>1559836872255</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559836872255</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -677,7 +684,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155185000" />
+    <option name="totallyTimeSpent" value="155572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -690,7 +697,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -1120,7 +1126,7 @@
     <entry file="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/src/main/java/com/outdd/oauthserver/config/MyUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
