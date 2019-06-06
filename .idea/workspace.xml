@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a734049-5bb5-46cc-a133-117588350f64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outdd-read-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/outdd-read-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outdd-read-oauth-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/outdd-read-oauth-center/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/outdd-read-api/target/" />
     <ignored path="$PROJECT_DIR$/outdd-read-api/outdd-read-api-member/target/" />
@@ -117,7 +116,7 @@
           <entry key="java" value="23" />
           <entry key="js" value="2" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="36" />
+          <entry key="xml" value="37" />
           <entry key="yml" value="16" />
         </counts>
       </usages-collector>
@@ -128,23 +127,23 @@
           <entry key="JAVA" value="23" />
           <entry key="JavaScript" value="2" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="36" />
+          <entry key="XML" value="37" />
           <entry key="YAML" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="44" />
-          <entry key="txt" value="24" />
-          <entry key="xml" value="48" />
+          <entry key="txt" value="30" />
+          <entry key="xml" value="51" />
           <entry key="yml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="44" />
-          <entry key="PLAIN_TEXT" value="24" />
-          <entry key="XML" value="48" />
+          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="XML" value="51" />
           <entry key="YAML" value="25" />
         </counts>
       </usages-collector>
@@ -152,47 +151,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outdd-read-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="39" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/outdd-read-oauth-center/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outdd-read-member/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="108" selection-end-column="14" />
+            <state relative-caret-position="459">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -302,9 +265,9 @@
         <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server/src/main/java/com/outdd/oauthserver/config/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/outdd-read-member/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/outdd-read-api/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/outdd-read-common/pom.xml" />
         <option value="$PROJECT_DIR$/outdd-read-oauth-center/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -361,34 +324,6 @@
               <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-common" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-oauth-center" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="outdd-read-parent-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="outdd-read-parent-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-oauth-center" type="462c0819:PsiDirectoryNode" />
-              <item name="outdd-read-oauth-common" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -403,7 +338,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559833846177" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559836217573" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -569,7 +504,7 @@
       <workItem from="1558579749337" duration="12512000" />
       <workItem from="1558662632163" duration="2755000" />
       <workItem from="1559287455374" duration="3512000" />
-      <workItem from="1559824921558" duration="7146000" />
+      <workItem from="1559824921558" duration="8402000" />
     </task>
     <task id="LOCAL-00001" summary="新增前端">
       <created>1557392442254</created>
@@ -613,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559832170124</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="oauth-common构建">
+      <created>1559833868336</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559833868336</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -649,7 +591,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153286000" />
+    <option name="totallyTimeSpent" value="154542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,7 +633,7 @@
       <window_info anchor="bottom" id="Problems" order="16" />
       <window_info anchor="right" id="Preview" order="0" weight="0.3297587" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" visible="true" weight="0.27815014" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.27815014" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -750,7 +692,8 @@
     <MESSAGE value="eureka构建" />
     <MESSAGE value="api构建" />
     <MESSAGE value="common构建" />
-    <option name="LAST_COMMIT_MESSAGE" value="common构建" />
+    <MESSAGE value="oauth-common构建" />
+    <option name="LAST_COMMIT_MESSAGE" value="oauth-common构建" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1059,24 +1002,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="108" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outdd-read-member/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/outdd-read-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="238">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1091,6 +1020,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outdd-read-member/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
