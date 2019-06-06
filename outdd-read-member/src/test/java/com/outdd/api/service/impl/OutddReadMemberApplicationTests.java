@@ -1,6 +1,7 @@
 package com.outdd.api.service.impl;
 
 import com.outdd.api.service.MemberApiService;
+import com.outdd.api.service.MenuApiService;
 import com.outdd.base.ResponseBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,12 +14,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class OutddReadMemberApplicationTests {
 
     @Autowired
-    MemberApiService memberApiService;
+    MenuApiService menuApiService;
     @Test
     public void contextLoads() {
-        ResponseBase responseBase = memberApiService.findById("1");
-        System.out.println(responseBase.toString());
-
+        ResponseBase res=menuApiService.findMenusByUserId(1);
+        System.out.println(res.toString());
     }
 
 }

@@ -1,12 +1,15 @@
 package com.outdd.api.service.impl;
 
+import com.outdd.api.entity.Menu;
 import com.outdd.api.entity.User;
 import com.outdd.api.service.MemberApiService;
 import com.outdd.base.BaseApiService;
 import com.outdd.base.ResponseBase;
+import com.outdd.common.PageHelp;
 import com.outdd.dao.UserRepository;
 import com.outdd.utils.PasswordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,5 +63,21 @@ public class MemberApiServiceImpl extends BaseApiService implements MemberApiSer
     public User loadUserByUsername(@PathVariable String username) {
         User user = userRepository.findByName(username);
         return user;
+    }
+
+    @Override
+    public ResponseBase findUsers(PageHelp page, User entity) {
+        Sort.Direction sort =  Sort.Direction.ASC;
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withMatcher("username", ExampleMatcher.GenericPropertyMatchers.startsWith());//模糊查询匹配开头，即{username}%
+//                .withMatcher("address" ,ExampleMatcher.GenericPropertyMatchers.contains())//全部模糊查询，即%{address}%
+//                .withIgnorePaths("password")//忽略字段，即不管password是什么值都不加入查询条件
+//                .withIgnorePaths("id");  //忽略属性：是否关注。因为是基本类型，需要忽略掉
+
+
+        Example<User> example = Example.of(entity,matcher);
+        Pageable pageable = PageRequest.of(page.current - 1, page.size, page.getOrderType(), page.sort);
+        Page<User> pageInfo = userRepository.findAll(example,pageable );
+        return setResult(HTTP_RES_CODE_200,"Page<User>", pageInfo);
     }
 }

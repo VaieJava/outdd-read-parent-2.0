@@ -1,6 +1,10 @@
 package com.outdd.oauthcommon.config;
 
+import com.outdd.api.entity.Menu;
+import com.outdd.api.entity.Permission;
+import com.outdd.api.entity.Role;
 import com.outdd.api.entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -11,7 +15,6 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
-import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +24,11 @@ import java.util.Map;
  * @Created 2019/3/10 10:35
  */
 @Configuration
+@Slf4j
 public class JwtToken {
+    public JwtToken(){
+        log.info("JwtToken初始化：setKey=123");
+    }
     @Bean
     public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -34,7 +41,8 @@ public class JwtToken {
      */
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
-        JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter() {
+        JwtAccessTokenConverter accessTokenConverter = new JwtAccessTokenConverter()
+        {
             /***
              * 重写增强token方法,用于自定义一些token返回的信息
              */
@@ -45,7 +53,8 @@ public class JwtToken {
                 /** 自定义一些token属性 ***/
                 final Map<String, Object> additionalInformation = new HashMap<>();
                 additionalInformation.put("userName", userName);
-                additionalInformation.put("roles", user.getAuthorities());
+                additionalInformation.put("userId", user.getId());
+//                additionalInformation.put("roles", user.getAuthorities());
                 ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInformation);
                 OAuth2AccessToken enhancedToken = super.enhance(accessToken, authentication);
                 return enhancedToken;
@@ -66,4 +75,5 @@ public class JwtToken {
         TokenStore tokenStore = new JwtTokenStore(accessTokenConverter());
         return tokenStore;
     }
+
 }

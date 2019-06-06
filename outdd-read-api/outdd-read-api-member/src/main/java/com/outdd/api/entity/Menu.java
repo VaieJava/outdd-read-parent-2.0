@@ -1,5 +1,9 @@
 package com.outdd.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -11,140 +15,55 @@ import java.util.List;
  */
 @Table(name="sys_menu")
 @Entity
+@Data
+@Proxy(lazy = false)
 public class Menu implements Serializable {
 
 	/** 菜单Id**/
-	private int menuId;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer menuId;
 	
 	/** 上级Id**/
-	private int parentId;
+	@Column(length=100)
+	private Integer parentId;
 	
 	/** 菜单名称**/
+	@Column(length=100)
 	private String menuName;
 	
 	/** 菜单图标**/
+	@Column(length=30)
 	private String menuIcon;
 	
 	/** 菜单URL**/
+	@Column(length=100)
 	private String menuUrl;
 	
 	/** 菜单类型**/
+	@Column(length=100)
 	private String menuType;
 	
 	/** 菜单排序**/
+	@Column(length=10)
 	private String menuOrder;
 
 	/**菜单状态**/
+	@Column(length=10)
 	private String menuStatus;
 
+	@Transient
 	private List<Menu> subMenu;
 
+	@Transient
 	private String target;
 
+	@Transient
 	private boolean hasSubMenu = false;
 
-	public Menu() {
-		super();
-	}   
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int getMenuId() {
-		return this.menuId;
-	}
+	@OneToMany(cascade=CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "parentId", referencedColumnName = "menuId")    //根据父级菜单ID，实现自关联（内部其实也就是一对多）
+	private List<Menu> menus;
 
-	public void setMenuId(int menuId) {
-		this.menuId = menuId;
-	}
-
-	@Column(length=100)
-	public int getParentId() {
-		return parentId;
-	}
-
-	public void setParentId(int parentId) {
-		this.parentId = parentId;
-	}
-
-	@Column(length=100)
-	public String getMenuName() {
-		return this.menuName;
-	}
-
-	public void setMenuName(String menuName) {
-		this.menuName = menuName;
-	}   
-	
-	@Column(length=30)
-	public String getMenuIcon() {
-		return this.menuIcon;
-	}
-
-	public void setMenuIcon(String menuIcon) {
-		this.menuIcon = menuIcon;
-	}   
-	
-	@Column(length=100)
-	public String getMenuUrl() {
-		return this.menuUrl;
-	}
-
-	public void setMenuUrl(String menuUrl) {
-		this.menuUrl = menuUrl;
-	}   
-	
-	@Column(length=100)
-	public String getMenuType() {
-		return this.menuType;
-	}
-
-	public void setMenuType(String menuType) {
-		this.menuType = menuType;
-	}
-
-	@Column(length=10)
-	public String getMenuOrder() {
-		return menuOrder;
-	}
-
-	public void setMenuOrder(String menuOrder) {
-		this.menuOrder = menuOrder;
-	}
-
-	@Column(length=10)
-	public String getMenuStatus(){
-		return menuStatus;
-	}
-
-	public void setMenuStatus(String menuStatus){
-		this.menuStatus = menuStatus;
-	}
-
-	@Transient
-	public List<Menu> getSubMenu() {
-		return subMenu;
-	}
-
-	public void setSubMenu(List<Menu> subMenu) {
-		this.subMenu = subMenu;
-	}
-
-	public void setTarget(String target){
-		this.target = target;
-	}
-
-	@Transient
-	public String getTarget(){
-		return target;
-	}
-
-	public void setHasSubMenu(boolean hasSubMenu){
-		this.hasSubMenu = hasSubMenu;
-	}
-
-	@Transient
-	public boolean getHasSubMenu(){
-		return hasSubMenu;
-	}
 
 }

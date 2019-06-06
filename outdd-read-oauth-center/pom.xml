@@ -6,6 +6,7 @@
         <groupId>com.outdd</groupId>
         <artifactId>outdd-read-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.outdd</groupId>
     <artifactId>outdd-read-oauth-center</artifactId>
@@ -45,13 +46,8 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>outdd-read-oauth-server</module>
+    </modules>
 
 </project>

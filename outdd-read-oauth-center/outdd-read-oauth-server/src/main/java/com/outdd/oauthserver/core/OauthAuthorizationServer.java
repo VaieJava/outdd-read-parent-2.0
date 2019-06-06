@@ -1,9 +1,8 @@
 package com.outdd.oauthserver.core;
 
-import com.outdd.constants.Constants;
 import com.outdd.oauthcommon.config.JwtToken;
 import com.outdd.oauthserver.config.MyRedisTokenStore;
-import com.outdd.oauthserver.exception.AuthExceptionEntryPoint;
+import com.outdd.oauthcommon.exception.AuthExceptionEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -11,14 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 
@@ -113,7 +109,8 @@ public class OauthAuthorizationServer extends AuthorizationServerConfigurerAdapt
                 //指定认证管理器
                 .authenticationManager(authenticationManager)
                 //用户账号密码认证
-                .userDetailsService(userDetailsService);
+                .userDetailsService(userDetailsService)
+                ;
 
         endpoints.exceptionTranslator(customWebResponseExceptionTranslator);//错误异常
 

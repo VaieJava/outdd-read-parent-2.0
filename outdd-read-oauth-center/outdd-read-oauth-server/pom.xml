@@ -6,6 +6,7 @@
         <groupId>com.outdd</groupId>
         <artifactId>outdd-read-oauth-center</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.outdd</groupId>
     <artifactId>outdd-read-oauth-server</artifactId>
@@ -42,6 +43,12 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>true</scope>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>

@@ -4,20 +4,17 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-api/outdd-read-api-member" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/outdd-read-client-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/outdd-read-bam-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-config-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/outdd-read-core-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-eureka-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/outdd-read-eureka-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/outdd-read-manage-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-member" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-oauth-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-resource" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/outdd-read-provider-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/outdd-read-zuul" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

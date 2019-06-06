@@ -1,6 +1,9 @@
 server:
   port: 8767
 spring:
+  devtools:
+    restart:
+      enabled: false
   application:
     name: oauth-service
   freemarker:
@@ -10,7 +13,7 @@ spring:
       name: member
       url: jdbc:mysql://39.107.226.36:3306/oauth2?useUnicode=true&characterEncoding=utf8
       username: root
-      password: root
+      password: vaielx571859
       driver-class-name: com.mysql.jdbc.Driver
       ###################以下为druid增加的配置###########################
       type: com.alibaba.druid.pool.DruidDataSource
@@ -60,7 +63,7 @@ eureka:
 #开启feign的hystrix
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000

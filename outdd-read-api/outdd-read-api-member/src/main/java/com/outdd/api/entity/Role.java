@@ -21,7 +21,7 @@ public class Role implements GrantedAuthority {
 	/** 角色Id**/
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int roleId;
+	private Integer roleId;
 
 	/** 角色描述**/
 	@Column(length=100)

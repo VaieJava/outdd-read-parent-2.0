@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-resource/pom.xml" />
         <option value="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/pom.xml" />
         <option value="$PROJECT_DIR$/outdd-read-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/outdd-read-bam-server/pom.xml" />
       </list>
     </option>
   </component>

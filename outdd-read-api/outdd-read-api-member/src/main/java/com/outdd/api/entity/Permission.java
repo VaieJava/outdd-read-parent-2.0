@@ -26,7 +26,7 @@ import javax.persistence.Table;
 @Entity
 public class Permission implements Serializable {
 
-	private int id;
+	private Integer id;
 	private String pdesc;
 	private String name;
 	private static final long serialVersionUID = 1L;
@@ -41,13 +41,16 @@ public class Permission implements Serializable {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	public int getId() {
-		return this.id;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
+
+
+
 
 	@Column(length=100)
 	public String getPdesc() {

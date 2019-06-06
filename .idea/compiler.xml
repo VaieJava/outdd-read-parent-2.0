@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="outdd-oauth-center" />
         <module name="outdd-read-api-member" />
+        <module name="outdd-read-bam-server" />
         <module name="outdd-read-common" />
         <module name="outdd-read-config-server" />
         <module name="outdd-read-eureka-server" />
@@ -22,6 +23,7 @@
       <module name="outdd-oauth-center" target="1.8" />
       <module name="outdd-read-api" target="1.8" />
       <module name="outdd-read-api-member" target="1.8" />
+      <module name="outdd-read-bam-server" target="1.8" />
       <module name="outdd-read-client-service" target="1.8" />
       <module name="outdd-read-common" target="1.8" />
       <module name="outdd-read-config-server" target="1.8" />
@@ -30,6 +32,7 @@
       <module name="outdd-read-eureka-service" target="1.8" />
       <module name="outdd-read-eurekaservice" target="1.8" />
       <module name="outdd-read-gateway" target="1.8" />
+      <module name="outdd-read-manage-web" target="1.8" />
       <module name="outdd-read-member" target="1.8" />
       <module name="outdd-read-oauth" target="1.8" />
       <module name="outdd-read-oauth-api" target="1.8" />

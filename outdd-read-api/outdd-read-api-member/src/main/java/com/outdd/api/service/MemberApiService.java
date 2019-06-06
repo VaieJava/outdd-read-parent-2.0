@@ -1,7 +1,9 @@
 package com.outdd.api.service;
 
+import com.outdd.api.entity.Menu;
 import com.outdd.api.entity.User;
 import com.outdd.base.ResponseBase;
+import com.outdd.common.PageHelp;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,4 +22,7 @@ public interface MemberApiService {
 
     @RequestMapping("loadUserByUsername/{username}")
     public User loadUserByUsername(@PathVariable("username") String username);
+
+    @RequestMapping("findUsers")
+    public ResponseBase findUsers(@PathVariable("page")PageHelp page, @PathVariable("entity")User entity);
 }

@@ -4,6 +4,8 @@ server:
 
 #spring配置
 spring:
+  kafka:
+    bootstrap-servers: 39.107.226.36:9082
   application:
     name: gateway-service
   cloud:
@@ -35,6 +37,30 @@ spring:
           - Path=/member/**
           filters:
           - StripPrefix=1
+  redis:
+    host: 39.107.226.36
+  port: 6379
+  pool:
+    max-idle: 100
+    min-idle: 1
+    max-active: 1000
+    max-wait: -1
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 20 #并发执行的最大线程数，默认10
+      maxQueueSize: 20 #BlockingQueue的最大队列数
+      queueSizeRejectionThreshold: 50 #即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+      execution:
+        timeout:
+          enabled: false #关闭熔断器超时检测时间功能，也就是不超时
+        isolation:
+          strategy: THREAD
+          semaphore:
+            maxConcurrentRequests: 1000
+          thread:
+            timeoutInMilliseconds: 200000
 
 #eureka配置
 eureka:
@@ -47,6 +73,7 @@ eureka:
     service-url:
       defaultZone: http://${eureka.host:39.107.226.36}:${eureka.port:8761}/eureka/
 #      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+
 #安全配置
 security:
   basic:

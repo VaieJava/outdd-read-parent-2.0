@@ -100,6 +100,11 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <module>outdd-read-member</module>
+        <module>outdd-read-oauth-center</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -111,14 +116,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -129,11 +126,5 @@
             </snapshots>
         </repository>
     </repositories>
-
-    <modules>
-        <module>outdd-read-eureka-server</module>
-        <module>outdd-read-common</module>
-        <module>outdd-read-api</module>
-    </modules>
 
 </project>

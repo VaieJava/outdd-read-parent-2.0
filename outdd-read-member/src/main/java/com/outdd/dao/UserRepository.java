@@ -3,6 +3,7 @@ package com.outdd.dao;
 import com.outdd.api.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -11,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-public interface UserRepository extends PagingAndSortingRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 
 	User findByUsername(String username);
 

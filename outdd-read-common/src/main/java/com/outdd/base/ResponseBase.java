@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ResponseBase {
     // 响应code
-    private Integer rtnCode;
+    private Integer code;
     // 消息内容
     private String msg;
     // 返回data
@@ -23,7 +23,7 @@ public class ResponseBase {
 
     public ResponseBase(Integer rtnCode, String msg, Object data) {
         super();
-        this.rtnCode = rtnCode;
+        this.code = rtnCode;
         this.msg = msg;
         this.data = data;
     }
@@ -32,7 +32,7 @@ public class ResponseBase {
     }
     @Override
     public String toString() {
-        return "ResponseBase [Code=" + rtnCode + ", msg=" + msg + ", data=" + data + "]";
+        return "ResponseBase [Code=" + code + ", msg=" + msg + ", data=" + data + "]";
     }
 
 }

@@ -1,6 +1,9 @@
 package com.outdd.oauthserver.core;
 
 import com.outdd.constants.Constants;
+import com.outdd.oauthcommon.exception.AuthExceptionEntryPoint;
+import com.outdd.oauthcommon.exception.CustomAccessDeniedHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -15,12 +18,16 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 @EnableResourceServer
 public class OauthResourceServer extends ResourceServerConfigurerAdapter {
 
-
+    @Autowired
+    CustomAccessDeniedHandler customAccessDeniedHandler;
     //资源安全配置
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
+
         resources
                 .resourceId(Constants.DEMO_RESOURCE_ID)//绑定客户端id
+                .authenticationEntryPoint(new AuthExceptionEntryPoint())//无权限操作
+                .accessDeniedHandler(customAccessDeniedHandler)
                 .stateless(true);
     }
 

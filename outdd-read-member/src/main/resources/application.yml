@@ -1,26 +1,17 @@
-auth-server1: http://localhost:8763/auth # 认证服务器地址
-
 server:
   port: 8762
+#logging:
+#  config: classpath:logging-spring.xml
 
-#security:
-#  oauth2:
-#    client:
-#      client-id: member
-#      client-secret: member
-#      scope: all
-#      access-token-uri: ${auth-server1}/oauth/token
-#      user-authorization-uri: ${auth-server1}/oauth/authorize
-#    resource:
-#      token-info-uri: ${auth-server1}/oauth/check_token
-
-
-#spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+logging:
+  level:
+    org.hibernate.type.descriptor.sql.BasicBinder : trace
 spring:
   jpa:
     database: mysql #设置方言
+    show_sql: true #显示sql
     hibernate:
-      show_sql: true #显示sql
+      ddl-auto: update
       format_sql: true #格式化sql
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #设置数据库sql、不加下划线
@@ -31,7 +22,7 @@ spring:
     name: member
     url: jdbc:mysql://39.107.226.36:3306/rbac?useUnicode=true&characterEncoding=utf8
     username: root
-    password: root
+    password: vaielx571859
     driver-class-name: com.mysql.jdbc.Driver
     ###################以下为druid增加的配置###########################
     type: com.alibaba.druid.pool.DruidDataSource
@@ -61,7 +52,7 @@ spring:
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
   redis:
-   host: 127.0.0.1
+   host: 39.107.226.36
   port: 6379
   pool:
     max-idle: 100

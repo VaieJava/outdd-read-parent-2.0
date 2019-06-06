@@ -27,7 +27,7 @@ public class User implements UserDetails {
 	/** 用户Id**/
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
-	private int id;
+	private Integer id;
 
 	/** 用户名**/
 	@Column(unique=true,length=100,nullable=false)
