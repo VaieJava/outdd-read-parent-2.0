@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="outdd-oauth-center" />
+        <module name="outdd-read-api-literature" />
         <module name="outdd-read-api-member" />
         <module name="outdd-read-bam-server" />
         <module name="outdd-read-common" />
@@ -23,6 +24,7 @@
     <bytecodeTargetLevel>
       <module name="outdd-oauth-center" target="1.8" />
       <module name="outdd-read-api" target="1.8" />
+      <module name="outdd-read-api-literature" target="1.8" />
       <module name="outdd-read-api-member" target="1.8" />
       <module name="outdd-read-bam-server" target="1.8" />
       <module name="outdd-read-client-service" target="1.8" />

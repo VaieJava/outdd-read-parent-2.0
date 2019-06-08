@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.outdd</groupId>
-    <artifactId>outdd-read-literature</artifactId>
+    <artifactId>outdd-read-api-literature</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>outdd-read-literature</name>
-    <description>作品信息服务api</description>
+    <name>outdd-read-api-literature</name>
+    <description>文献api</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,6 +22,12 @@
             <groupId>com.outdd</groupId>
             <artifactId>outdd-read-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

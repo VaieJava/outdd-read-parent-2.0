@@ -11,7 +11,7 @@
     <artifactId>outdd-read-literature</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>outdd-read-literature</name>
-    <description>作品信息</description>
+    <description>文献服务</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.outdd</groupId>
-            <artifactId>outdd-read-api-member</artifactId>
+            <artifactId>outdd-read-api-literature</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!--阿里数据源-->

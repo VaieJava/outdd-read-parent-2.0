@@ -1,13 +1,13 @@
-package com.outdd.outddreadliterature;
+package com.outdd.literature;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OutddReadLiteratureApplication {
+public class LiteratureApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OutddReadLiteratureApplication.class, args);
+        SpringApplication.run(LiteratureApplication.class, args);
     }
 
 }
