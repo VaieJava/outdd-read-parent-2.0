@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/outdd-read-config-server/outdd-read-config-server.iml" filepath="$PROJECT_DIR$/outdd-read-config-server/outdd-read-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/outdd-read-eureka-server/outdd-read-eureka-server.iml" filepath="$PROJECT_DIR$/outdd-read-eureka-server/outdd-read-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/outdd-read-gateway/outdd-read-gateway.iml" filepath="$PROJECT_DIR$/outdd-read-gateway/outdd-read-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/outdd-read-api/outdd-read-literature/outdd-read-literature.iml" filepath="$PROJECT_DIR$/outdd-read-api/outdd-read-literature/outdd-read-literature.iml" />
       <module fileurl="file://$PROJECT_DIR$/outdd-read-member/outdd-read-member.iml" filepath="$PROJECT_DIR$/outdd-read-member/outdd-read-member.iml" />
       <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-center.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/outdd-read-oauth-common.iml" filepath="$PROJECT_DIR$/outdd-read-oauth-center/outdd-read-oauth-common/outdd-read-oauth-common.iml" />

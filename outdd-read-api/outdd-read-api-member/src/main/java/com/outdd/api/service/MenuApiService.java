@@ -21,4 +21,9 @@ public interface MenuApiService {
 
     public ResponseBase findMenus(PageHelp page,Menu entity);
 
+    public ResponseBase findSubMenuByParentId(Integer id);
+
+    public ResponseBase findSubMenuByParentId(String path);
+
+
 }

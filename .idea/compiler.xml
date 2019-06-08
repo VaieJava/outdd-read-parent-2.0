@@ -13,6 +13,7 @@
         <module name="outdd-read-config-server" />
         <module name="outdd-read-eureka-server" />
         <module name="outdd-read-gateway" />
+        <module name="outdd-read-literature" />
         <module name="outdd-read-member" />
         <module name="outdd-read-oauth-common" />
         <module name="outdd-read-oauth-resource" />
@@ -32,6 +33,7 @@
       <module name="outdd-read-eureka-service" target="1.8" />
       <module name="outdd-read-eurekaservice" target="1.8" />
       <module name="outdd-read-gateway" target="1.8" />
+      <module name="outdd-read-literature" target="1.8" />
       <module name="outdd-read-manage-web" target="1.8" />
       <module name="outdd-read-member" target="1.8" />
       <module name="outdd-read-oauth" target="1.8" />
