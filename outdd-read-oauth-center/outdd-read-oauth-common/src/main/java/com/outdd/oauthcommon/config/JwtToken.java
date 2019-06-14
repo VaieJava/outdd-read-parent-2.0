@@ -1,9 +1,6 @@
 package com.outdd.oauthcommon.config;
 
-import com.outdd.api.entity.Menu;
-import com.outdd.api.entity.Permission;
-import com.outdd.api.entity.Role;
-import com.outdd.api.entity.User;
+import com.outdd.api.member.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

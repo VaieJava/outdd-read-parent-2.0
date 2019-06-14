@@ -1,6 +1,6 @@
 package com.outdd.dao;
 
-import com.outdd.api.entity.Menu;
+import com.outdd.api.member.entity.Menu;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

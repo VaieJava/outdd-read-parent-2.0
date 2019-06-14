@@ -1,7 +1,7 @@
 package com.outdd.dao;
 
 
-import com.outdd.api.entity.RolePermission;
+import com.outdd.api.member.entity.RolePermission;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

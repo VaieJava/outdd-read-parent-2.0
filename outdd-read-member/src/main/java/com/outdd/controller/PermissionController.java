@@ -1,9 +1,7 @@
 package com.outdd.controller;
 
-import com.outdd.api.entity.Permission;
-import com.outdd.api.entity.Role;
-import com.outdd.api.service.PermissionApiService;
-import com.outdd.api.service.RoleApiService;
+import com.outdd.api.member.entity.Permission;
+import com.outdd.api.member.service.PermissionApiService;
 import com.outdd.base.ResponseBase;
 import com.outdd.common.PageHelp;
 import org.springframework.beans.factory.annotation.Autowired;

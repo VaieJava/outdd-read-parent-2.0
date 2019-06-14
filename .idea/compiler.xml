@@ -17,7 +17,6 @@
         <module name="outdd-read-literature" />
         <module name="outdd-read-member" />
         <module name="outdd-read-oauth-common" />
-        <module name="outdd-read-oauth-resource" />
         <module name="outdd-read-oauth-server" />
       </profile>
     </annotationProcessing>

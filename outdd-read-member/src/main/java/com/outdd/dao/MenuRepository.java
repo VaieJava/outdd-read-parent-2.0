@@ -2,11 +2,10 @@ package com.outdd.dao;
 
 import java.util.List;
 
-import com.outdd.api.entity.Menu;
+import com.outdd.api.member.entity.Menu;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.data.repository.query.QueryByExampleExecutor;
 
 public interface MenuRepository extends JpaRepository<Menu,Integer> {
 
@@ -31,6 +30,14 @@ public interface MenuRepository extends JpaRepository<Menu,Integer> {
 	 */
 	@Query(value = "select m from Menu m where m.parentId=:id order by m.menuOrder asc")
 	public List<Menu> findSubMenuByParentId(@Param("id") int id);
+
+	/**
+	 * 根据上级菜单Id获取二级菜单，并按菜单序号排序id
+	 * @param
+	 * @return
+	 */
+	@Query(value = "select m from Menu m where m.menuUrl like %:path% order by m.menuOrder asc")
+	public List<Menu> findSubMenuByPath(@Param("path") String path);
 
 	/**
 	 * 通过菜单Id获取菜单信息

@@ -1,8 +1,7 @@
 package com.outdd.controller;
 
-import com.outdd.api.entity.Menu;
-import com.outdd.api.entity.Role;
-import com.outdd.api.service.RoleApiService;
+import com.outdd.api.member.entity.Role;
+import com.outdd.api.member.service.RoleApiService;
 import com.outdd.base.ResponseBase;
 import com.outdd.common.PageHelp;
 import org.springframework.beans.factory.annotation.Autowired;

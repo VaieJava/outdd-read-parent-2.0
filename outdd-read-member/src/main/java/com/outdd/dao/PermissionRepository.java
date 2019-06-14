@@ -1,9 +1,8 @@
 package com.outdd.dao;
 
 
-import com.outdd.api.entity.Permission;
+import com.outdd.api.member.entity.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 
 /**
  * Created by Nicky on 2017/11/11.

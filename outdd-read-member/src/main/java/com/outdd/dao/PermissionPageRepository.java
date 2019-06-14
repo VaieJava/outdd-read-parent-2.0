@@ -1,7 +1,7 @@
 package com.outdd.dao;
 
 
-import com.outdd.api.entity.Permission;
+import com.outdd.api.member.entity.Permission;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**

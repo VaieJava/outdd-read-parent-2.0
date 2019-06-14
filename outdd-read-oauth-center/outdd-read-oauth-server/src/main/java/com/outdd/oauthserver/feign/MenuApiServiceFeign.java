@@ -1,6 +1,6 @@
 package com.outdd.oauthserver.feign;
 
-import com.outdd.api.service.MenuApiService;
+import com.outdd.api.member.service.MenuApiService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 

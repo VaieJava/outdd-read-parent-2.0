@@ -1,11 +1,5 @@
-#端口设置
-server:
-  port: 9001
-
 #spring配置
 spring:
-  kafka:
-    bootstrap-servers: 39.107.226.36:9082
   application:
     name: gateway-service
   cloud:
@@ -37,14 +31,6 @@ spring:
           - Path=/member/**
           filters:
           - StripPrefix=1
-  redis:
-    host: 39.107.226.36
-  port: 6379
-  pool:
-    max-idle: 100
-    min-idle: 1
-    max-active: 1000
-    max-wait: -1
 
 hystrix:
   threadpool:
@@ -61,18 +47,6 @@ hystrix:
             maxConcurrentRequests: 1000
           thread:
             timeoutInMilliseconds: 200000
-
-#eureka配置
-eureka:
-  instance:
-    ##续约更新时间间隔设置5秒，m默认30s
-    lease-renewal-interval-in-seconds: 5
-    ##续约到期时间10秒，默认是90秒
-    lease-expiration-duration-in-seconds: 10
-  client:
-    service-url:
-      defaultZone: http://${eureka.host:39.107.226.36}:${eureka.port:8761}/eureka/
-#      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
 
 #安全配置
 security:

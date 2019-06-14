@@ -1,10 +1,7 @@
 package com.outdd.controller;
 
-import com.outdd.MemberServer;
-import com.outdd.api.entity.Menu;
-import com.outdd.api.entity.User;
-import com.outdd.api.service.MemberApiService;
-import com.outdd.api.service.MenuApiService;
+import com.outdd.api.member.entity.User;
+import com.outdd.api.member.service.MemberApiService;
 import com.outdd.base.ResponseBase;
 import com.outdd.common.PageHelp;
 import org.springframework.beans.factory.annotation.Autowired;

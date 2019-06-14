@@ -1,7 +1,7 @@
 package com.outdd.controller;
 
-import com.outdd.api.entity.Menu;
-import com.outdd.api.service.MenuApiService;
+import com.outdd.api.member.entity.Menu;
+import com.outdd.api.member.service.MenuApiService;
 import com.outdd.common.PageHelp;
 import com.outdd.base.ResponseBase;
 import org.springframework.beans.factory.annotation.Autowired;

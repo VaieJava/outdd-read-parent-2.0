@@ -1,6 +1,6 @@
 package com.outdd.oauthserver.config;
 
-import com.outdd.api.entity.User;
+import com.outdd.api.member.entity.User;
 import com.outdd.base.BaseResponse;
 import com.outdd.base.RedisUtil;
 import com.outdd.oauthserver.feign.MemberApiServiceFeign;

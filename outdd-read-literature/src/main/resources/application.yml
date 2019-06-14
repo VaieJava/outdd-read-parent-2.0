@@ -9,14 +9,18 @@ logging:
 spring:
   jpa:
     database: mysql #设置方言
-    show_sql: true #显示sql
-    hibernate:
-      ddl-auto: update
-      format_sql: true #格式化sql
-#      naming:
+    show-sql: true #显示sql
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true #格式化sql
+
+  #      naming:
 #        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #设置数据库sql、不加下划线
   application:
-    name: member-server
+    name: literature-server
   datasource:
     ##数据库连接信息
     name: member

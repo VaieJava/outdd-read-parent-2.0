@@ -1,9 +1,7 @@
 package com.outdd.dao;
 
-import com.outdd.api.entity.Role;
-import org.springframework.data.jpa.repository.Query;
+import com.outdd.api.member.entity.Role;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.repository.query.Param;
 
 /**
  * Created by Nicky on 2017/7/30.
