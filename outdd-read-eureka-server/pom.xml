@@ -10,7 +10,7 @@
     <groupId>com.outdd</groupId>
     <artifactId>outdd-read-eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eurekaServer</name>
+    <name>outdd-read-eureka-server</name>
     <description>注册中心</description>
     <packaging>jar</packaging>
 
@@ -33,6 +33,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>eurekaServer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
