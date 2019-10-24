@@ -10,7 +10,7 @@
     <groupId>com.outdd</groupId>
     <artifactId>outdd-read-eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>outdd-read-eureka-server</name>
+    <name>eurekaServer</name>
     <description>注册中心</description>
     <packaging>jar</packaging>
 
