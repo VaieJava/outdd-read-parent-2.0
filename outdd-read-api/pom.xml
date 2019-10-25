@@ -25,6 +25,7 @@
 
     <modules>
         <module>outdd-read-api-member</module>
+        <module>outdd-read-api-literature</module>
     </modules>
 
 
