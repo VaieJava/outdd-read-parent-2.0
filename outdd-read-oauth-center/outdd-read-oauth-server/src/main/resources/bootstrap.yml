@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: oauth-service # 对应config-server获取的配置文件的{application}
+  cloud:
+    config:
+#      uri: http://172.17.0.4:8791 # 对应config-server地址，默认值http://localhost:8888
+      uri: http://39.107.226.36:8791 # 对应config-server地址，默认值http://localhost:8888
+      profile: dev  # 对应config-server获取的配置文件的{profile}
+      label: master # 对应config-server获取的配置文件的{label}，即Git仓库分支
